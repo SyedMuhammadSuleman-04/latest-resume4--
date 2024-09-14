@@ -1,0 +1,156 @@
+/* Base styles for all screen sizes */
+body {
+    font-family: 'Times New Roman', Times, serif;
+    margin: 20px;
+    padding: 0;
+    background-color:#47a9bb;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+h1 {
+    text-align: center;
+    color: #025463;
+    font-size: 2rem;
+}
+
+form {
+    max-width: 100%;
+    width: 600px;
+    margin: auto;
+    background-color: #47a9bb;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px #04404a;
+    padding: 20px;
+    border: 2px solid #164758; /* Added border to match the resume */
+    box-sizing: border-box; /* Ensures padding and border don't exceed the width */
+}
+
+fieldset {
+    border: 2px solid #164758;
+    border-radius: 8px;
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #74d2e3;
+}
+
+legend {
+    font-weight: bold;
+    color: #0704ae;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    color: #0704ae;
+}
+
+input, textarea {
+    width: calc(100% - 1px);
+    padding: 8px;
+    margin-top: 4px;
+    border: 1px solid #04404a;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: #dfeef7;
+}
+
+button {
+    width: 160px;
+    height: 34px;
+    border: none;
+    border-radius: 4px;
+    background-color: #025463;
+    color: #74d2e3;
+    font-size: smaller;
+    cursor: pointer;
+    text-align: center;
+    display: block;
+    margin: 20px auto;  /* Centering the button */
+}
+
+button:hover {
+    background-color: #242bb1;
+}
+
+/* Generated resume box */
+#resumeOutput {
+    max-width: 100%;
+    width: 600px;  /* Same width as form */
+    margin: auto;
+    padding: 20px;
+    border: 2px solid #164758; /* Same border as form */
+    border-radius: 6px;
+    background-color: #74d2e3;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box; /* Prevents border from causing overflow */
+}
+
+/* Mobile: Up to 600px */
+@media only screen and (max-width: 600px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+    
+    button {
+        width: 100%;
+        height: 40px;
+        font-size: 1rem;
+    }
+    
+    form, #resumeOutput {
+        width: 100%;
+        padding: 15px;
+        margin: 10px;
+        border: 2px solid #164758; /* Ensure borders are still visible */
+        box-sizing: border-box;
+    }
+}
+
+/* Tablets: 601px to 1024px */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+    
+    form, #resumeOutput {
+        width: 80%;
+        padding: 20px;
+        margin: auto;
+        border: 2px solid #164758;
+        box-sizing: border-box;
+    }
+
+    button {
+        max-width: 180px;
+        height: 36px;
+    }
+}
+
+/* Desktop: 1025px and above */
+@media only screen and (min-width: 1025px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    form, #resumeOutput {
+        width: 600px;
+        border: 2px solid #164758;
+        box-sizing: border-box;
+    }
+
+    button {
+        max-width: 160px;
+        height: 34px;
+    }
+}
+
+
+[contenteditable="true"] {
+    background-color: #f3f3f3; /* Highlight editable areas */
+    border-bottom: 1px dashed #025463; /* Optional border to indicate it's editable */
+    cursor: text;
+}
+
+[contenteditable="true"]:hover {
+    background-color: #e0e0e0;
+}
